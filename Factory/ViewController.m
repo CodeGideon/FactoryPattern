@@ -30,10 +30,10 @@
     [super viewDidLoad];
     
     //简单工厂
-    SOperation *sfyoutiao = [SFactory operationWithType:SFactoryProductTypeYoutiao];
-    [sfyoutiao getProductName];
-    SOperation *sfdoujiang = [SFactory operationWithType:SFactoryProductTypeDoujiang];
-    [sfdoujiang getProductName];
+    SOperation *soperationYoutiao = [SFactory operationWithType:SFactoryProductTypeYoutiao];
+    [soperationYoutiao getProductName];
+    SOperation *soperationDoujiang = [SFactory operationWithType:SFactoryProductTypeDoujiang];
+    [soperationDoujiang getProductName];
     
     //工厂模式
     FFactory *ffactoryYoutiao = [[FFactoryYoutiao alloc] init];
@@ -44,7 +44,7 @@
     [foperationDoujiang getProductName];
     
     
-    //抽象工程模式
+    //抽象工厂模式
     AFactory *afactoryBig = [[AFactoryBig alloc] init];
     AOperationYoutiao *aoperationYoutiao = [afactoryBig getYoutiao];
     AOperationDoujiang *aoperationDoujiang = [afactoryBig getDoujiang];
@@ -60,7 +60,7 @@
     
     
     
-
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
